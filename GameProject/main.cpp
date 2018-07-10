@@ -7,9 +7,15 @@
 //
 
 #include <iostream>
-
+#include "pong.hpp"
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    using namespace std;
+    
+    Pong p;
+    bool sucess=p.init();
+    if(sucess){
+        p.runLoop();
+    }
+    p.exit();
     return 0;
 }
