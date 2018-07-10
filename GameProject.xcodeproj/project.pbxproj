@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0156B4220F3DD4200BE98E5 /* pong.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0156B4020F3DD4200BE98E5 /* pong.cpp */; };
 		B0D7B61D20ED6F0E001B2F8F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0D7B61C20ED6F0E001B2F8F /* main.cpp */; };
+		B0D7B62520ED7008001B2F8F /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D7B62420ED7008001B2F8F /* libSDL2-2.0.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B0156B4020F3DD4200BE98E5 /* pong.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = pong.cpp; sourceTree = "<group>"; };
+		B0156B4120F3DD4200BE98E5 /* pong.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = pong.hpp; sourceTree = "<group>"; };
 		B0D7B61920ED6F0E001B2F8F /* GameProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GameProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0D7B61C20ED6F0E001B2F8F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B0D7B62420ED7008001B2F8F /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../../usr/local/Cellar/sdl2/2.0.8/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0D7B62520ED7008001B2F8F /* libSDL2-2.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				B0D7B61B20ED6F0E001B2F8F /* GameProject */,
 				B0D7B61A20ED6F0E001B2F8F /* Products */,
+				B0D7B62320ED7008001B2F8F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +65,18 @@
 			isa = PBXGroup;
 			children = (
 				B0D7B61C20ED6F0E001B2F8F /* main.cpp */,
+				B0156B4020F3DD4200BE98E5 /* pong.cpp */,
+				B0156B4120F3DD4200BE98E5 /* pong.hpp */,
 			);
 			path = GameProject;
+			sourceTree = "<group>";
+		};
+		B0D7B62320ED7008001B2F8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0D7B62420ED7008001B2F8F /* libSDL2-2.0.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0D7B61D20ED6F0E001B2F8F /* main.cpp in Sources */,
+				B0156B4220F3DD4200BE98E5 /* pong.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +256,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.8/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,6 +269,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.8/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
